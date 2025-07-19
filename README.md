@@ -16,18 +16,24 @@ Spence is a modern, cross-platform budgeting app built with Flutter. It helps yo
 ## Folder Structure
 
 ```
-lib/
-  main.dart            # App entry point
-  pages/
-    homepage.dart      # Home page (main app UI)
-    loginpage.dart     # Login and onboarding UI
-    login_carousel.dart# Carousel widget for onboarding
-assets/
-  images/              # App images and illustrations
-  fonts/               # Custom fonts (e.g., CalSans)
-test/
-  widget_test.dart     # Widget tests
-android/, ios/, web/, windows/, macos/, linux/ # Platform-specific code
+spence/
+├── lib/
+│   ├── main.dart
+│   └── pages/
+│       ├── homepage.dart
+│       ├── loginpage.dart
+│       └── login_carousel.dart
+├── assets/
+│   ├── images/                  
+│   └── fonts/                   
+├── test/
+│   └── widget_test.dart
+├── android/
+├── ios/
+├── web/
+├── windows/
+├── macos/
+└── linux/
 ```
 
 ## Getting Started
@@ -52,5 +58,3 @@ android/, ios/, web/, windows/, macos/, linux/ # Platform-specific code
 - To change onboarding images, replace files in `assets/images/`.
 - To update the launch screen, see `ios/Runner/Assets.xcassets/LaunchImage.imageset/` and `ios/Runner/Base.lproj/Main.storyboard`.
 - Fonts can be managed in `assets/fonts/` and configured in `pubspec.yaml`.
-
-
