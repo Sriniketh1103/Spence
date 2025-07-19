@@ -1,16 +1,56 @@
-# spence
+# Spence
 
-A new Flutter project.
+> Your Budget, On Track
+
+Spence is a modern, cross-platform budgeting app built with Flutter. It helps you track expenses, visualize your budget, set financial goals, and stay on top of your spending with a beautiful and intuitive UI.
+
+## Features
+
+- Google sign-in for secure authentication
+- Carousel onboarding with illustrations and captions
+- Responsive and expressive UI with gradients, shadows, and custom fonts
+- Track expenses and visualize your budget
+- Set financial goals and receive notifications
+- Cross-platform: Android, iOS, Web, Windows, macOS, Linux
+
+## Folder Structure
+
+```
+lib/
+  main.dart            # App entry point
+  pages/
+    homepage.dart      # Home page (main app UI)
+    loginpage.dart     # Login and onboarding UI
+    login_carousel.dart# Carousel widget for onboarding
+assets/
+  images/              # App images and illustrations
+  fonts/               # Custom fonts (e.g., CalSans)
+test/
+  widget_test.dart     # Widget tests
+android/, ios/, web/, windows/, macos/, linux/ # Platform-specific code
+```
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. **Install Flutter:** [Flutter installation guide](https://docs.flutter.dev/get-started/install)
+2. **Clone this repo:**
+   ```sh
+   git clone https://github.com/Sriniketh1103/Spence.git
+   cd Spence
+   ```
+3. **Install dependencies:**
+   ```sh
+   flutter pub get
+   ```
+4. **Run the app:**
+   ```sh
+   flutter run
+   ```
 
-A few resources to get you started if this is your first Flutter project:
+## Customization
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- To change onboarding images, replace files in `assets/images/`.
+- To update the launch screen, see `ios/Runner/Assets.xcassets/LaunchImage.imageset/` and `ios/Runner/Base.lproj/Main.storyboard`.
+- Fonts can be managed in `assets/fonts/` and configured in `pubspec.yaml`.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
