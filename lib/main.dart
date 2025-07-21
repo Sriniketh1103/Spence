@@ -1,8 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:spence/pages/homepage.dart';
-import 'package:spence/pages/loginpage.dart';
+import 'package:spence/pages/mainpage.dart';
 
-void main() {
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -26,7 +30,7 @@ class _MyAppState extends State<MyApp> {
         ),
         primaryColor: Color(0xFF72988B),
       ),
-      home: LoginPage(),
+      home: Mainpage(),
     );
   }
 }
