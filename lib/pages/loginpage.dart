@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:spence/pages/homepage.dart';
 import 'package:spence/pages/login_carousel.dart';
+import 'package:spence/services/authservices/googlesignin.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -12,6 +14,12 @@ class _LoginPageState extends State<LoginPage> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
   final int _numPages = 4;
+ 
+  @override
+  void initState() {
+    super.initState();
+    GoogleSignInService.initializeGoogleSignIn();
+  }
 
   @override
   void dispose() {
@@ -102,8 +110,14 @@ class _LoginPageState extends State<LoginPage> {
                             height: 30,
                           ),
                           label: const Text('Login with Google'),
-                          onPressed: () {
-                            // TODO: Google sign-in logic
+                          onPressed: () async {
+                            await GoogleSignInService.signIn();
+                            final user = GoogleSignInService.currentUser;
+                            print(user);
+                            if (user != null) {
+                              print('Signed in as: ${user.displayName}');
+                              
+                            }
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
