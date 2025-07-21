@@ -18,43 +18,26 @@ Spence is a modern, cross-platform budgeting app built with Flutter. It helps yo
 ```
 spence/
 ├── lib/
-│   ├── main.dart
-│   └── pages/
-│       ├── homepage.dart
-│       ├── loginpage.dart
-│       └── login_carousel.dart
+│   ├── main.dart                  # App entry point
+│   ├── firebase_options.dart      # Firebase config (auto-generated)
+│   ├── pages/
+│   │   ├── mainpage.dart          # Handles auth state and routing
+│   │   ├── homepage.dart          # Main app UI after login
+│   │   ├── loginpage.dart         # Login and onboarding UI
+│   │   └── login_carousel.dart    # Carousel widget for onboarding
+│   └── services/
+│       └── authservices/
+│           └── googlesignin.dart  # Google sign-in logic
 ├── assets/
-│   ├── images/                  
-│   └── fonts/                   
+│   ├── images/                    # App images and illustrations
+│   └── fonts/                     # Custom fonts (e.g., CalSans)
 ├── test/
-│   └── widget_test.dart
-├── android/
-├── ios/
-├── web/
-├── windows/
-├── macos/
-└── linux/
+│   └── widget_test.dart           # Widget tests
+├── android/                       # Android-specific code
+├── ios/                           # iOS-specific code
+├── web/                           # Web-specific code
+├── windows/                       # Windows-specific code
+├── macos/                         # macOS-specific code
+└── linux/                         # Linux-specific code
 ```
 
-## Getting Started
-
-1. **Install Flutter:** [Flutter installation guide](https://docs.flutter.dev/get-started/install)
-2. **Clone this repo:**
-   ```sh
-   git clone https://github.com/Sriniketh1103/Spence.git
-   cd Spence
-   ```
-3. **Install dependencies:**
-   ```sh
-   flutter pub get
-   ```
-4. **Run the app:**
-   ```sh
-   flutter run
-   ```
-
-## Customization
-
-- To change onboarding images, replace files in `assets/images/`.
-- To update the launch screen, see `ios/Runner/Assets.xcassets/LaunchImage.imageset/` and `ios/Runner/Base.lproj/Main.storyboard`.
-- Fonts can be managed in `assets/fonts/` and configured in `pubspec.yaml`.
