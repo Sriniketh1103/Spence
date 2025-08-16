@@ -18,15 +18,53 @@ class LoginCarousel extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Expanded(child: Image.asset(image, fit: BoxFit.contain)),
+        Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              height: 250,
+              width: 250,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: const Color.fromARGB(130, 5, 97, 28).withOpacity(0.05),
+              ),
+            ),
+            SizedBox(
+              height: 180,
+              width: 180,
+              child: Image.asset(image, fit: BoxFit.contain),
+            ),
+          ],
+        ),
         const SizedBox(height: 20),
         Text(
           text,
-          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(height: 8),
+        Text(
+          _getDescription(text),
+          style: const TextStyle(fontSize: 14, color: Colors.grey),
           textAlign: TextAlign.center,
         ),
       ],
     );
+  }
+
+  String _getDescription(String title) {
+    switch (title) {
+      case 'Track your expenses easily':
+        return 'Effortlessly log every purchase and keep your spending organized.';
+      case 'Visualize your budget with charts':
+        return 'See your financial health at a glance with beautiful charts.';
+      case 'Set goals and stay on track':
+        return 'Set savings targets and monitor your progress over time.';
+      case 'Get notified about your spending':
+        return 'Receive timely alerts to help you avoid overspending.';
+      default:
+        return '';
+    }
   }
 
   @override
@@ -34,7 +72,7 @@ class LoginCarousel extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 250,
+          height: 400,
           child: PageView(
             controller: pageController,
             onPageChanged: onPageChanged,

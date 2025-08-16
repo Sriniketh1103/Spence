@@ -14,7 +14,7 @@ class _LoginPageState extends State<LoginPage> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
   final int _numPages = 4;
- 
+
   @override
   void initState() {
     super.initState();
@@ -68,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
 
               // Carousel and Login Button Centered
               Padding(
-                padding: const EdgeInsets.only(top: 100),
+                padding: const EdgeInsets.only(top: 50),
                 child: Center(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -116,7 +116,6 @@ class _LoginPageState extends State<LoginPage> {
                             print(user);
                             if (user != null) {
                               print('Signed in as: ${user.displayName}');
-                              
                             }
                           },
                           style: ElevatedButton.styleFrom(
